@@ -48,7 +48,7 @@ public class CollegeStudent extends Student implements Comparable <CollegeStuden
 		if (this.getAge() >= 18 && this.getAge() <= 22 && this.getGPA() >=2.5)
 			return true;
 		else
-		return false;
+			return false;
 	}
 	
 }
