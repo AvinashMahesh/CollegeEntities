@@ -1,4 +1,4 @@
-public class CollegeStudent extends Student{
+public class CollegeStudent extends Student implements Comparable <CollegeStudent>, Employable {
 
 	
 	private String year;
@@ -29,4 +29,26 @@ public class CollegeStudent extends Student{
 	public void getInfo() {
 		System.out.println("Name: " + super.getName() + " Age: " + super.getAge() + " Gender: " + super.getGender() + " ID: " + super.getIDNum() + " GPA: " + super.getGPA() + " Year: " + getYear() + " Major: " + getMajor() + " Graduation Year: " + getGradYear());
 	}
+
+	@Override
+	public int compareTo(CollegeStudent o) {
+		String a = o.getName();
+		String b = this.getName();
+		if(b.compareTo(a) < 0)
+			return -1;
+		if(b.compareTo(a) > 0)
+			return 1;
+		if(b.compareTo(a) == 0)
+			return 0;
+		return 0;
+	}
+
+	@Override
+	public boolean isEmployable() {
+		if (this.getAge() >= 18 && this.getAge() <= 22 && this.getGPA() >=2.5)
+			return true;
+		else
+		return false;
+	}
+	
 }
