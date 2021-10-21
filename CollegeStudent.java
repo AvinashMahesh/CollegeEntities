@@ -30,4 +30,3 @@ public class CollegeStudent extends Student{
 		System.out.println("Name: " + super.getName() + " Age: " + super.getAge() + " Gender: " + super.getGender() + " ID: " + super.getIDNum() + " GPA: " + super.getGPA() + " Year: " + getYear() + " Major: " + getMajor() + " Graduation Year: " + getGradYear());
 	}
 }
-
